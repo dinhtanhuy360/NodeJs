@@ -1,0 +1,22 @@
+{
+  "name": "full-stack",
+  "version": "1.0.0",
+  "description": "fullstack nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodejs",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "huy"
+  },
+  "keywords": [
+    "h"
+  ],
+  "author": "huy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
