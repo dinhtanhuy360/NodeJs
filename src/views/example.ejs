@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện bán hàng</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 10px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* Main Section */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 300px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #ff6600;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background-color: #e55d00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Shop Hàng Hoá Online</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Sản phẩm 1">
+            <div class="product-info">
+                <h3>Sản phẩm 1</h3>
+                <p>Mô tả ngắn gọn về sản phẩm này.</p>
+                <div class="price">500,000đ</div>
+                <a href="#" class="buy-btn">Mua ngay</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Sản phẩm 2">
+            <div class="product-info">
+                <h3>Sản phẩm 2</h3>
+                <p>Mô tả ngắn gọn về sản phẩm này.</p>
+                <div class="price">750,000đ</div>
+                <a href="#" class="buy-btn">Mua ngay</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Sản phẩm 3">
+            <div class="product-info">
+                <h3>Sản phẩm 3</h3>
+                <p>Mô tả ngắn gọn về sản phẩm này.</p>
+                <div class="price">1,000,000đ</div>
+                <a href="#" class="buy-btn">Mua ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Shop Hàng Hoá Online. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
