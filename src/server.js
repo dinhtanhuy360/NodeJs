@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
+
 // server xửu lý các url và nạp thông tin vào app hiển lên giao diện
 // hoặc code đang nói cho server biết là khi người dùng vào route '/' thì cần gửi ra hello world
 
@@ -10,7 +11,9 @@ const path = require("path");
 app.set("views", path.join(__dirname, "views")); // c2
 //
 // nói cho express biết dùng templete engine này bên trong thực./views
-c2: app.set("view engine", "ejs");
+app.set("view engine", "ejs");
+app.set("views", "./src/views/");
+//
 // trả cho người một file
 app.get("/file", (req, res) => {
   res.render("sample.ejs");
