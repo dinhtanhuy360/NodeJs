@@ -9,14 +9,19 @@ const path = require("path");
 // config template engine
 // app.set("views", "./src/views/"); c1:
 app.set("views", path.join(__dirname, "views")); // c2
-//
 // nói cho express biết dùng templete engine này bên trong thực./views
 app.set("view engine", "ejs");
-app.set("views", "./src/views/");
-//
 // trả cho người một file
 app.get("/file", (req, res) => {
   res.render("sample.ejs");
+});
+// trả ra một trang index bán hàng
+app.get("/hanghoa", (req, res) => {
+  res.render("example.ejs");
+});
+// trả ra trang web bán mỹ phẩm
+app.get("/mypham", (req, res) => {
+  res.render("mypham.ejs");
 });
 app.get("/", (req, res) => {
   res.send("Hello Dinh Tan Huy ");
