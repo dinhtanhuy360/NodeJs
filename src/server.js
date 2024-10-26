@@ -6,7 +6,7 @@ const port = 8080;
 // hoặc code đang nói cho server biết là khi người dùng vào route '/' thì cần gửi ra hello world
 
 // config template engine
-app.set("views", "./views/");
+app.set("views", "./src/views");
 //
 // nói cho express biết dùng templete engine này bên trong thực./views
 app.set("view engine", "ejs");
