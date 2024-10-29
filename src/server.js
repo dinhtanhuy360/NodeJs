@@ -1,11 +1,14 @@
 const express = require("express");
-const app = express();
-const port = 8080;
 const path = require("path");
+require("dotenv").config();
 
+console.log(">>> check env", process.env);
+
+const app = express();
+const port = process.env.PORT || 8888;
+const hostname = process.env.HOST_NAME;
 // server xửu lý các url và nạp thông tin vào app hiển lên giao diện
 // hoặc code đang nói cho server biết là khi người dùng vào route '/' thì cần gửi ra hello world
-
 // config template engine
 // app.set("views", "./src/views/"); c1:
 app.set("views", path.join(__dirname, "views")); // c2
@@ -35,16 +38,13 @@ app.get("/work", (req, res) => {
 app.get("/major", (req, res) => {
   res.send("Tôi sẽ không thất nghiệp");
 });
-
 // trả về cho người dùng html
 app.get("/html", (req, res) => {
   res.send("<h5>huy</h5>");
 });
-
 app.get("/css", (req, res) => {
   res.send("css ");
 });
-
-app.listen(port, () => {
+app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
 });
