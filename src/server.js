@@ -5,7 +5,7 @@ require("dotenv").config();
 console.log(">>> check env", process.env);
 
 const app = express();
-const port = process.env.PORT || 8888;
+const port = process.env.PORT || 8888; // một trong hai port sẽ hoạt động nên ko bị chết
 const hostname = process.env.HOST_NAME;
 // server xửu lý các url và nạp thông tin vào app hiển lên giao diện
 // hoặc code đang nói cho server biết là khi người dùng vào route '/' thì cần gửi ra hello world
@@ -30,10 +30,10 @@ app.get("/", (req, res) => {
   res.send("Hello Dinh Tan Huy ");
 });
 app.get("/abc", (req, res) => {
-  res.send("Hello Worlds!");
+  res.send("Hello Worlds huy!");
 });
 app.get("/work", (req, res) => {
-  res.send("Tôi sẽ có việc làm");
+  res.send("Tôi sẽ có việc làm ngay mai");
 });
 app.get("/major", (req, res) => {
   res.send("Tôi sẽ không thất nghiệp");
