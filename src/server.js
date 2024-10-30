@@ -14,6 +14,9 @@ const hostname = process.env.HOST_NAME;
 app.set("views", path.join(__dirname, "views")); // c2
 // nói cho express biết dùng templete engine này bên trong thực./views
 app.set("view engine", "ejs");
+// config static file
+app.use(express.static(path.join(__dirname, "public")));
+
 // trả cho người một file
 app.get("/file", (req, res) => {
   res.render("sample.ejs");
@@ -25,6 +28,10 @@ app.get("/hanghoa", (req, res) => {
 // trả ra trang web bán mỹ phẩm
 app.get("/mypham", (req, res) => {
   res.render("mypham.ejs");
+});
+// trả ảnh ra cho người dùng
+app.get("/anh", (req, res) => {
+  res.render("class.ejs");
 });
 app.get("/", (req, res) => {
   res.send("Hello Dinh Tan Huy ");
