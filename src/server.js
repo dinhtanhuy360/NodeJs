@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-require("dotenv").config();
+require("dotenv").config(); // crt s để thay đổi chương trình
 
 console.log(">>> check env", process.env);
 
@@ -15,7 +15,7 @@ app.set("views", path.join(__dirname, "views")); // c2
 // nói cho express biết dùng templete engine này bên trong thực./views
 app.set("view engine", "ejs");
 // config static file
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); // tìm ảnh trong mục public
 
 // trả cho người một file
 app.get("/file", (req, res) => {
@@ -25,7 +25,7 @@ app.get("/file", (req, res) => {
 app.get("/hanghoa", (req, res) => {
   res.render("example.ejs");
 });
-// trả ra trang web bán mỹ phẩm
+// trả ra trang web bán mỹ phẩm////
 app.get("/mypham", (req, res) => {
   res.render("mypham.ejs");
 });
