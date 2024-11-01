@@ -13,6 +13,7 @@ const hostname = process.env.HOST_NAME;
 configViewEngine(app);
 // tạo phiên bản cho API
 app.use("/version1", webRotes);
+app.use("/version2", webRotes);
 
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
