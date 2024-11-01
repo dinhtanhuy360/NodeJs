@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
 require("dotenv").config(); // crt s để thay đổi chương trình
+const configViewEngine = require("./config/viewEngine");
 
 console.log(">>> check env", process.env);
-
 const app = express();
 const port = process.env.PORT || 8888; // một trong hai port sẽ hoạt động nên ko bị chết
 const hostname = process.env.HOST_NAME;
+configViewEngine(app);
 // server xửu lý các url và nạp thông tin vào app hiển lên giao diện
 // hoặc code đang nói cho server biết là khi người dùng vào route '/' thì cần gửi ra hello world
 // config template engine
@@ -14,8 +15,6 @@ const hostname = process.env.HOST_NAME;
 app.set("views", path.join(__dirname, "views")); // c2
 // nói cho express biết dùng templete engine này bên trong thực./views
 app.set("view engine", "ejs");
-// config static file
-app.use(express.static(path.join(__dirname, "public"))); // tìm ảnh trong mục public
 
 // trả cho người một file
 app.get("/file", (req, res) => {
