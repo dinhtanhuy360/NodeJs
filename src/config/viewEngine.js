@@ -1,5 +1,14 @@
 const path = require("path");
+const express = require("express");
 const configViewEngine = (app) => {
-  app.set("view", path.join(__dirname, "views"));
-  app.set("config", "ejs");
+  // config template engine
+  console.log(path.join("./src", "views"));
+  app.set("views", path.join("./src", "views"));
+  app.set("view engine", "ejs");
+  // config static file,// tìm ảnh trong mục public
+  app.use(
+    express.static(path.join("check name static folder", "./src", "public"))
+  );
 };
+
+module.exports = configViewEngine;
