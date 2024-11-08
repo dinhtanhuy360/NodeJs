@@ -2,7 +2,7 @@ const getHomePage = (req, res) => {
   res.send("Dinh Tan Huy");
 };
 const getABC = (req, res) => {
-  res.send("ABC");
+  res.render("mypham.ejs");
 };
 module.exports = {
   getHomePage,
