@@ -17,9 +17,7 @@ configViewEngine(app);
 // tạo phiên bản cho API
 app.use("/version1", webRotes);
 app.use("/version2", webRotes);
-connection.query("SELECT * FROM nguoidung", function (err, result) {
-  console.log("resault: ", result);
-});
+
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
 });
