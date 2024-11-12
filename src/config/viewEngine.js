@@ -6,9 +6,7 @@ const configViewEngine = (app) => {
   app.set("views", path.join("./src", "views"));
   app.set("view engine", "ejs");
   // config static file,// tìm ảnh trong mục public
-  app.use(
-    express.static(path.join("check name static folder", "./src", "public"))
-  );
+  app.use(express.static(path.join("./src", "public")));
 };
 
 module.exports = configViewEngine;
