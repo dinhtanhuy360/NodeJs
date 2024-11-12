@@ -6,6 +6,7 @@ require("dotenv").config(); // crt s để thay đổi chương trình
 // tìm đến config và file viewEngine
 const configViewEngine = require("./config/viewEngine");
 const connection = require("./config/database");
+23;
 // // tìm đến thư mục routes và file web hay điều hướng các trang , api
 const webRotes = require("./routes/web");
 console.log(">>> check env", process.env);
