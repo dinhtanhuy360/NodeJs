@@ -1,6 +1,10 @@
 // import express
 const express = require("express");
-const { getHomePage, getABC } = require("../controllers/homeController.js");
+const {
+  getHomePage,
+  getABC,
+  addUsers,
+} = require("../controllers/homeController.js");
 const routes = express.Router();
 
 // trả cho người một file hạy gọi là xử lý logic
@@ -10,8 +14,9 @@ routes.get("/file", (req, res) => {
 // trả ra một trang index bán hàng
 // hander là hàm xử lý
 // router.method('/ss', hander)
-routes.get("/huyhandsome", getHomePage);
+routes.get(getHomePage);
 routes.get("/abcController", getABC);
+routes.post("/addUsers", addUsers);
 // trả ra trang web bán mỹ phẩm////
 // chỉ định gọi hàm getABC
 routes.get("/mypham", (getABC) => {
