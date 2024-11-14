@@ -11,11 +11,14 @@ const connection = require("../config/database");
 const getHomePage = (req, res) => {
   return res.render("home.ejs");
 };
-
+const addUsers = (req, res) => {
+  return res.send(" Dinh Tan Huy");
+};
 const getABC = (req, res) => {
   res.render("mypham.ejs");
 };
 module.exports = {
   getHomePage,
   getABC,
+  addUsers,
 };

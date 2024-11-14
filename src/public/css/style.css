@@ -32,3 +32,51 @@
        background-color: #04AA6D;
        color: white;
    }
+   
+   /* Style tổng quan cho form fileset */
+
+   .form {
+       width: 300px;
+       margin: 20px auto;
+       padding: 20px;
+       border: 1px solid #ccc;
+       border-radius: 8px;
+       background-color: #f9f9f9;
+       font-family: Arial, sans-serif;
+   }
+
+   fieldset {
+       border: none;
+       padding: 0;
+   }
+
+   legend {
+       font-weight: bold;
+       font-size: 1.2em;
+       margin-bottom: 10px;
+   }
+
+   .input_group {
+       margin-bottom: 15px;
+   }
+
+   .input_group label {
+       display: block;
+       font-size: 0.9em;
+       color: #333;
+       margin-bottom: 5px;
+   }
+
+   .input_group input[type="text"] {
+       width: 100%;
+       padding: 8px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
+       font-size: 1em;
+   }
+
+   .input_group input[type="text"]:focus {
+       border-color: #66afe9;
+       outline: none;
+   }
