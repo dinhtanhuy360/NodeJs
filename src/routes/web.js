@@ -14,7 +14,7 @@ routes.get("/file", (req, res) => {
 // trả ra một trang index bán hàng
 // hander là hàm xử lý
 // router.method('/ss', hander)
-routes.get(getHomePage);
+routes.get("/huyhandsome", getHomePage);
 routes.get("/abcController", getABC);
 routes.post("/addUsers", addUsers);
 // trả ra trang web bán mỹ phẩm////

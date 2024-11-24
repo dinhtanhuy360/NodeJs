@@ -15,7 +15,13 @@ const port = process.env.PORT || 8888; // một trong hai port sẽ hoạt độ
 const hostname = process.env.HOST_NAME;
 // truyền express
 configViewEngine(app);
+// config req.body
+app.use(express.json()); // for json
+app.use(express.urlencoded({ extended: true })); // for form data
 // tạo phiên bản cho API
+// app.use("/version1", webRotes);
+// app.use("/version2", webRotes);
+// không tại phiên bản API
 app.use(webRotes);
 app.use(webRotes);
 
