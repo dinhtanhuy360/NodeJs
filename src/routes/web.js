@@ -4,6 +4,7 @@ const {
   getHomePage,
   getABC,
   addUsers,
+  getUsers,
 } = require("../controllers/homeController.js");
 const routes = express.Router();
 
@@ -14,6 +15,7 @@ routes.get("/file", (req, res) => {
 // trả ra một trang index bán hàng
 // hander là hàm xử lý
 // router.method('/ss', hander)
+routes.get("/getUsers", getUsers);
 routes.get("/huyhandsome", getHomePage);
 routes.get("/abcController", getABC);
 routes.post("/addUsers", addUsers);
